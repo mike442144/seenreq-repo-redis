@@ -1,7 +1,7 @@
 {
   "name": "seenreq-repo-redis",
-  "version": "0.0.1",
-  "description": "A repo uses Redis to store the keys",
+  "version": "0.0.2",
+  "description": "A redis repo adapter for seenreq",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,10 +12,10 @@
   },
   "keywords": [
     "seenreq",
-    "url",
-    "request",
-    "redis",
     "repo",
+    "redis",
+    "adapter",
+    "request",
     "store"
   ],
   "author": "Mike Chen",
