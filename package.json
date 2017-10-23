@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+ssh://git@github.com/mike442144/seenreq-repo-redis.git"
   },
+  "dependencies":{
+    "seenreq":"^1.0.0",
+    "ioredis":"^1.8.0"
+  },
   "keywords": [
     "seenreq",
     "repo",
