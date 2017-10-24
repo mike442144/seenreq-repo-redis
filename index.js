@@ -1,3 +1,6 @@
+
+'use strict'
+
 const Repo = require("seenreq/repo")
 , Redis = require('ioredis')
 
@@ -12,7 +15,7 @@ class RedisRepo extends Repo{
             password: ''
 	}
 
-	options = Object.assign({},defaultOptions, options);
+	this.options = options = Object.assign({},defaultOptions, options);
 	this.redis = new Redis(options);
 	this.appName = options.appName || 'seenreq';
 	this.clearOnQuit = options.clearOnQuit !== false;
@@ -52,58 +55,5 @@ class RedisRepo extends Repo{
 	}
     }
 }
-
-/*
-    @param opt(array of object) 
-        {
-            sign: "GET http://www.baidu.com/\r\n",
-            update: true
-        }
-    @return rst(array of boolean), each element denotes the existence of corresponding object in opt
- */
-// RedisRepo.prototype.exists = function(opt, callback) {
-//     var req = opt,
-//         slots = {},
-//         uniq = [],
-//         keysToInsert = {};
-
-//     var rst = new Array(req.length);
-
-//     for (var i = 0; i < req.length; i++) {
-//         var key = this.transformKey(req[i].sign);
-//         if (key in slots) {
-//             rst[i] = true;
-//         } else {
-//             rst[i] = false;
-//             slots[key] = i;
-//             if (req[i].update === true) {
-//                 keysToInsert[key] = null;
-//             }
-//             uniq.push(key);
-//         }
-//     }
-
-//     this.getByKeys(uniq, (err, result) => {
-//         if (err)
-//             return callback(err);
-
-//         for (var j = 0; j < uniq.length; j++) {
-//             if (result[j] == '1') {
-//                 rst[slots[uniq[j]]] = true;
-//                 delete keysToInsert[uniq[j]];
-//             } else {
-//                 rst[slots[uniq[j]]] = false;
-//             }
-//         }
-
-        
-// 	this.setByKeys(keysToInsert, (err) => {
-//             if (err)
-//                 return callback(err);
-
-//             callback(null, rst);
-//         });
-//     });
-// }
 
 module.exports = RedisRepo;
