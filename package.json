@@ -4,15 +4,15 @@
   "description": "A redis repo adapter for seenreq",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout=15000  ./test/*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/mike442144/seenreq-repo-redis.git"
   },
-  "dependencies":{
-    "seenreq":"^1.0.0",
-    "ioredis":"^1.8.0"
+  "dependencies": {
+    "seenreq": "^1.0.0",
+    "ioredis": "^1.8.0"
   },
   "keywords": [
     "seenreq",
@@ -27,5 +27,11 @@
   "bugs": {
     "url": "https://github.com/mike442144/seenreq-repo-redis/issues"
   },
-  "homepage": "https://github.com/mike442144/seenreq-repo-redis#readme"
+  "homepage": "https://github.com/mike442144/seenreq-repo-redis#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "rewire": "^4.0.1",
+    "sinon": "^6.1.3"
+  }
 }
