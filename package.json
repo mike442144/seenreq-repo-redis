@@ -1,6 +1,6 @@
 {
   "name": "seenreq-repo-redis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A redis repo adapter for seenreq",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+ssh://git@github.com/mike442144/seenreq-repo-redis.git"
   },
   "dependencies": {
-    "seenreq": "^1.0.0",
+    "seenreq": "^2.0.0",
     "ioredis": "^1.8.0"
   },
   "keywords": [
