@@ -1,6 +1,6 @@
 {
   "name": "seenreq-repo-redis",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "A redis repo adapter for seenreq",
   "main": "index.js",
   "scripts": {

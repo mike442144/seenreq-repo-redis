@@ -16,6 +16,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+.coveralls.yml
 
 # nyc test coverage
 .nyc_output
@@ -57,3 +58,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# editors' tmp file
+*~
+
+#emacs
+.dir-locals.el
